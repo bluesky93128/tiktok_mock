@@ -48,7 +48,11 @@ const home = () => {
                         setProgress(data.currentTime / duration);
                       }
                     }}
-                    onLoadStart={() => setIndeterminate(true)}
+                    onLoadStart={() => {
+                      if (curIndex === index) {
+                        setIndeterminate(true);
+                      }
+                    }}
                     onReadyForDisplay={() => setIndeterminate(false)}
                   />
                   <PlayController
