@@ -11,14 +11,14 @@ const PlayController = props => {
       <TouchableWithoutFeedback onPress={props.onPress}>
         <Container>
           {!props.isPlaying ? (
-            <Icon name="play" size={80} color={'rgba(255, 255, 255, 0.5)'} />
+            <Icon name="play" size={50} color={'rgba(255, 255, 255, 0.5)'} />
           ) : (
             <></>
           )}
           <ProgressBarContainer>
             <ProgressBar
               indeterminate={props.indeterminate}
-              progress={props.progress}
+              progress={props.progress ? props.progress : 0}
               color={'#fff'}
               unfilledColor={'rgba(255, 255, 255, 0.5)'}
               width={null}
