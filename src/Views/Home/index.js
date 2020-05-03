@@ -2,8 +2,9 @@ import React, {useState, useEffect} from 'react';
 import Swiper from 'react-native-swiper';
 
 import VideoRender from '../../Components/VideoView';
-import {Container, Title, SwiperContainer, TextView} from './styles';
+import {Container, Title, SwiperContainer} from './styles';
 import CommentModal from '../ComentModal';
+import ShareModal from '../ShareModal';
 
 const Home = () => {
   const [isPlaying, setPlaying] = useState(true);
@@ -11,7 +12,8 @@ const Home = () => {
   const [isLoading, setLoading] = useState(true);
   const [videos, setVideos] = useState([]);
   const [user, setUser] = useState();
-  const [bShowComment, SetShowComment] = useState(false);
+  const [bShowComment, setShowComment] = useState(false);
+  const [bShowShare, setShowShare] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -46,9 +48,9 @@ const Home = () => {
   return (
     <>
       {isLoading ? (
-        <>
-          <TextView>Loading...</TextView>
-        </>
+        <Container>
+          <Title>Loading...</Title>
+        </Container>
       ) : (
         <Container>
           <SwiperContainer>
@@ -65,7 +67,8 @@ const Home = () => {
                     curIndex={curIndex}
                     user={user}
                     isPlaying={isPlaying}
-                    showComment={SetShowComment}
+                    showComment={setShowComment}
+                    onShare={setShowShare}
                   />
                 );
               })}
@@ -76,7 +79,13 @@ const Home = () => {
       )}
       <CommentModal
         isVisible={bShowComment}
-        goBack={() => SetShowComment(false)}
+        goBack={() => setShowComment(false)}
+        curIndex={curIndex}
+      />
+      <ShareModal
+        isVisible={bShowShare}
+        goBack={() => setShowShare(false)}
+        curIndex={curIndex}
       />
     </>
   );

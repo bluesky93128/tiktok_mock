@@ -5,7 +5,7 @@ import {ButtonContainer, Image, PlusIcon} from './styles';
 const Button = props => {
   return (
     <>
-      <ButtonContainer>
+      <ButtonContainer {...props}>
         <Icon name={'share'} size={30} color={'white'} />
       </ButtonContainer>
     </>

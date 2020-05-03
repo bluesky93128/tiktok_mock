@@ -4,9 +4,10 @@ import {StyleSheet} from 'react-native';
 
 export const Container = styled.View`
   width: 100%;
-  height: 110%;
+  height: 100%;
   flex: 1;
   align-items: center;
+  background-color: black;
 `;
 export const VideoView = styled(Video)`
   width: 100%;

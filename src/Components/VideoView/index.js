@@ -18,7 +18,7 @@ const VideoRender = props => {
   const [duration, setDuration] = useState(0);
   const [indeterminate, setIndeterminate] = useState(false);
 
-  const {video, index, curIndex, user, showComment} = props;
+  const {video, index, curIndex, user, showComment, onShare} = props;
 
   const renderButtons = () => {
     return (
@@ -26,7 +26,7 @@ const VideoRender = props => {
         <UserButton userAvatar={user.results[0].picture.thumbnail} />
         <LikeButton />
         <CommentButton onPress={() => showComment(true)} />
-        <ShareButton />
+        <ShareButton onPress={() => onShare(true)} />
         <ResponseButton userAvatar={user.results[0].picture.thumbnail} />
       </>
     );

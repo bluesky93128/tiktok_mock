@@ -59,15 +59,9 @@ export const TextView = styled.Text`
 
 export const InputContainer = styled.View`
   flex-direction: row;
-  flex: 1;
   width: 100%;
-  height: 40px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  justify-content: center;
-  align-items: center;
-  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-bottom-color: gray;
   background-color: white;
 `;
 
