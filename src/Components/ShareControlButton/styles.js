@@ -14,7 +14,8 @@ export const Image = styled.Image`
 
 export const Number = styled.View`
   width: 40px;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const TextView = styled.Text`

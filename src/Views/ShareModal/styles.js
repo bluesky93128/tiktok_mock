@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 export const Container = styled.View`
   width: 100%;
-  height: 60%;
+  height: 40%;
   background-color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -53,15 +53,13 @@ export const HeartContainer = styled.TouchableOpacity`
 `;
 
 export const TextView = styled.Text`
-  font-size: 10px;
+  font-size: 20px;
   margin-bottom: 3px;
 `;
 
-export const InputContainer = styled.View`
+export const InputContainer = styled.ScrollView`
   flex-direction: row;
   width: 100%;
-  border-bottom-width: 1px;
-  border-bottom-color: gray;
   background-color: white;
 `;
 
@@ -71,6 +69,13 @@ export const TextInput = styled.TextInput`
 
 export const SendButton = styled.TouchableOpacity`
   flex: 1;
+`;
+
+export const CancelButton = styled.TouchableOpacity`
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 `;
 
 export const styles = StyleSheet.create({

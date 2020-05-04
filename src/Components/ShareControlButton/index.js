@@ -8,8 +8,8 @@ const Button = props => {
   return (
     <>
       <ButtonContainer>
-        <IconContainer color={'#4b9dfe'}>
-          <Icon name={type} size={25} color={'white'} />
+        <IconContainer color={'#30303020'}>
+          <Icon name={type} size={25} color={'black'} />
         </IconContainer>
         <Number>
           <TextView>{description}</TextView>

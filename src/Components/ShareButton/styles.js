@@ -26,3 +26,13 @@ export const PlusIcon = styled.View`
   background-color: white;
   border-radius: 10px;
 `;
+
+export const Number = styled.View`
+  width: 100%;
+`;
+
+export const TextView = styled.Text`
+  font-size: 10px;
+  text-align: center;
+  color: white;
+`;
