@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import Animated from 'react-native-reanimated';
 
 export const ButtonContainer = styled.TouchableOpacity`
   position: absolute;
@@ -10,6 +11,10 @@ export const ButtonContainer = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+`;
+
+export const AnimatedView = styled(Animated.View)`
+  transform: [{rotate: 90}]
 `;
 
 export const Image = styled.Image`
