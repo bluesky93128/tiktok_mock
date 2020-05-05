@@ -20,6 +20,7 @@ export const TextView = styled.Text`
   color: white;
   font-size: 12px;
   margin-bottom: 5px;
+  margin-left: 5px;
 `;
 
 export const Description = styled.View`

@@ -66,12 +66,10 @@ const VideoRender = props => {
         resizeMode={'contain'}
         paused={!(isPlaying && curIndex === index)}
         onLoad={data => {
-          if (curIndex === index) {
-            setDuration(data.duration);
-          }
+          setDuration(data.duration);
         }}
         onProgress={data => {
-          if (curIndex === index) {
+          if (curIndex === index && duration) {
             setProgress(data.currentTime / duration);
           }
         }}
